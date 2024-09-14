@@ -1,0 +1,11 @@
+    _G.AutoLV = true
+    spawn(function()
+       game:GetService("RunService").RenderStepped:Connect(function()
+        pcall(function()
+            if _G.AutoLV then
+            game:GetService'VirtualUser':CaptureController()
+            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+            end
+        end)
+       end)
+    end)
